@@ -1,184 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Djan Najib IT Solutions – Web & App Development</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Najib Cyber Solutions | IT Services in Kampala Uganda</title>
 
-  <!-- Google verification tag -->
   <meta name="google-site-verification" content="guGANHNpezYBZlA2QgvxLLh6HpgVYo-SM-t_tiPatOY" />
-
-  <meta name="description" content="Djan Najib IT Solutions – Web Development, App Development, Computer Applications, Software Installation, Graphics Design, and Video Editing in Kampala, Uganda. Contact us today!">
-  <meta name="keywords" content="IT solutions Kampala, Web development Uganda, App development Uganda, Software installation Kampala, Graphics design Kampala, Video editing Uganda">
-  <meta name="author" content="Djan Najib">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Najib Cyber Solutions offers web development, app development, video editing, graphic design, networking, Wi-Fi installation, software installation, and general IT support in Kampala, Uganda." />
+  <meta name="keywords" content="Najib Cyber Solutions, IT services Kampala, web development Uganda, app development Uganda, networking Kampala, WiFi installation Uganda, graphic design Kampala, video editing Uganda" />
+  <meta name="author" content="Najib Cyber Solutions" />
+  <meta name="robots" content="index, follow" />
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #f5f7fa;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
     header {
-      background: linear-gradient(to right, #0044cc, #0066ff);
-      color: white;
-      padding: 40px;
+      background: linear-gradient(135deg, rgba(0, 153, 255, 0.9), rgba(0, 214, 143, 0.85));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 120px 20px 80px;
+      position: relative;
     }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin: 0 auto 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      border: 3px solid rgba(255,255,255,0.25);
+      background: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #f2f2f2;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 40px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #00c853;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #00a844;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #0b4ea2;
+    }
+
+    .btn-secondary:hover {
+      background: #e7eefc;
+      transform: translateY(-3px);
+    }
+
     nav {
-      background: #003399;
-      padding: 15px;
-      text-align: center;
+      background: rgba(3, 16, 38, 0.95);
       position: sticky;
       top: 0;
+      z-index: 999;
+      padding: 15px 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     }
+
+    nav .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav h2 {
+      color: #fff;
+      font-size: 1.3rem;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
+      color: #fff;
       font-weight: bold;
+      transition: 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      color: #00d68f;
     }
+
     section {
-      padding: 40px;
-      max-width: 1000px;
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
       margin: auto;
     }
-    h2 {
-      color: #0044cc;
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #00d68f;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+      color: #cfd8e3;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-box,
+    .contact-box,
+    .why-card,
+    .card {
+      background: #161b22;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+      overflow: hidden;
+    }
+
+    .about-box {
+      padding: 30px;
+    }
+
+    .about-box p {
+      color: #d5dbe3;
       margin-bottom: 15px;
     }
-    .services {
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
     }
+
     .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(0, 214, 143, 0.18);
     }
+
     .card img {
       width: 100%;
-      height: 180px;
+      height: 210px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
     }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
+
+    .card-content {
       padding: 20px;
     }
-    .contact {
+
+    .card-content h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      color: #cfd8e3;
+      font-size: 0.96rem;
+    }
+
+    .why-card {
+      padding: 25px;
       text-align: center;
-      background: #eef3ff;
+    }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .why-card p {
+      color: #cfd8e3;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .contact-box {
       padding: 30px;
-      border-radius: 12px;
     }
-    button {
-      padding: 10px 20px;
-      background: #0044cc;
+
+    .contact-box p,
+    .contact-box li {
+      color: #d5dbe3;
+      margin-bottom: 12px;
+    }
+
+    .contact-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-box a {
+      color: #00d68f;
+      font-weight: bold;
+    }
+
+    .whatsapp-banner {
+      background: linear-gradient(135deg, #00c853, #00a884);
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
+      text-align: center;
+      padding: 35px 20px;
+      border-radius: 18px;
     }
-    button:hover {
-      background: #002266;
+
+    .whatsapp-banner h3 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .whatsapp-banner p {
+      margin-bottom: 18px;
+    }
+
+    footer {
+      background: #02060d;
+      color: #d0d7de;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.95rem;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .floating-whatsapp:hover {
+      background: #1ebc59;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav .nav-container {
+        justify-content: center;
+      }
+
+      nav .links {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Djan Najib IT Solutions</h1>
-    <p>“Your One-Stop Hub for All IT Services in Kampala, Uganda”</p>
+
+  <header id="home">
+    <div class="hero-content">
+      <img src="images/logo.png" alt="Najib Cyber Solutions Logo" class="logo" />
+      <h1>Najib Cyber Solutions</h1>
+      <p>Your trusted one-stop center for web development, app development, video editing, graphic design, networking, Wi-Fi installation, software support, and all IT-related solutions in Kampala, Uganda.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/256753298143?text=Hello%20Najib%20Cyber%20Solutions%2C%20I%20need%20your%20services" class="btn btn-primary" target="_blank">Chat on WhatsApp</a>
+        <a href="#services" class="btn btn-secondary">Explore Services</a>
+      </div>
+    </div>
   </header>
 
   <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-container">
+      <h2>Najib Cyber Solutions</h2>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <section id="about">
-    <h2>About Us</h2>
-    <img src="https://images.unsplash.com/photo-1581090700227-7e9c1f3d9f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjc3M3wwfDF8c2VhcmNofDF8fGl0JTIwc2VydmljZXN8ZW58MHx8fHwxNjk1NzI4NDA5&ixlib=rb-4.0.3&q=80&w=1080" 
-         alt="IT Services in Kampala" style="width:100%; border-radius:12px; margin-bottom:20px;">
-    <p>At <strong>Djan Najib IT Solutions</strong>, we specialize in delivering professional IT services including web development, app development, computer applications, software installation, graphics design, and video editing. We aim to empower businesses and individuals in Kampala, Uganda with top-notch technology solutions.</p>
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">We provide modern and reliable technology services for individuals, businesses, schools, and organizations.</p>
+      <div class="about-grid">
+        <div class="about-box">
+          <p><strong>Najib Cyber Solutions</strong> is a professional IT service brand based in Kampala, Uganda. We help clients solve digital and technical challenges through modern website development, app creation, video editing, networking, graphics design, software installation, and general IT support.</p>
+          <p>Our goal is to deliver affordable, creative, and dependable IT services that help our clients grow, work better, and stay connected in today’s digital world.</p>
+          <p><strong>Location:</strong> Kampala, Uganda<br>
+          <strong>Phone:</strong> 0753298143<br>
+          <strong>Email:</strong> djanssentongo@gmail.com</p>
+        </div>
+        <div class="about-image">
+          <img src="images/applic.png" alt="Najib Cyber Solutions IT Services" />
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Web Development">
-        <h3>Web Development</h3>
-        <p>Modern, responsive websites for businesses, schools, and personal brands.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091012184-2a16c9f0f3f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="App Development">
-        <h3>App Development</h3>
-        <p>Custom mobile & desktop applications to boost your productivity.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581090700335-8f0c42b5c8f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Computer Applications">
-        <h3>Computer Applications</h3>
-        <p>Training and support for essential computer applications.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581090700191-b9aaaf75a849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Software Installation">
-        <h3>Software Installation</h3>
-        <p>Quick and reliable installation of all necessary software.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Graphics Design">
-        <h3>Graphics Design</h3>
-        <p>Creative logos, posters, and branding materials for your business.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091012175-2e7c9b64b0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Video Editing">
-        <h3>Video Editing</h3>
-        <p>Professional video editing services for events, ads, and businesses.</p>
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">We offer a complete range of high-quality IT and digital services.</p>
+      <div class="services-grid">
+        <div class="card">
+          <img src="images/Video-editing.png" alt="Video Editing" />
+          <div class="card-content">
+            <h3>Video Editing</h3>
+            <p>Professional editing for events, adverts, promotions, social media content, and business videos.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/graphic-design.png" alt="Graphic Design" />
+          <div class="card-content">
+            <h3>Graphic Design</h3>
+            <p>Creative posters, flyers, logos, banners, social media designs, and business branding materials.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/app-development.png" alt="App Development" />
+          <div class="card-content">
+            <h3>App Development</h3>
+            <p>We develop user-friendly and practical mobile or desktop apps tailored to client needs.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/website-development.png" alt="Website Development" />
+          <div class="card-content">
+            <h3>Website Development</h3>
+            <p>Modern, responsive, and attractive websites for personal brands, schools, companies, and businesses.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/web-programming.png" alt="Web Programming" />
+          <div class="card-content">
+            <h3>Web Development</h3>
+            <p>Custom-built web systems and online platforms with smooth performance and clean design.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/software-installation.png" alt="Software Installation" />
+          <div class="card-content">
+            <h3>Software Installation</h3>
+            <p>We install and configure software, applications, drivers, and important computer tools.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/network-cabling.png" alt="Network Cabling" />
+          <div class="card-content">
+            <h3>Networking & Cable Monitoring</h3>
+            <p>Professional network setup, structured cabling, cable tracing, device connection, and maintenance.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/network-rack.png" alt="WiFi Installation and Networking" />
+          <div class="card-content">
+            <h3>Wi-Fi Installation</h3>
+            <p>Home, school, and office Wi-Fi setup, troubleshooting, extension, and optimization.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="portfolio">
-    <h2>Our Work</h2>
-    <div class="services">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Website Project">
-        <p>Website project for a local business in Kampala.</p>
+    <div class="container">
+      <h2 class="section-title">Our Work</h2>
+      <p class="section-subtitle">Some of the areas where our skills and creativity are applied.</p>
+      <div class="portfolio-grid">
+        <div class="card">
+          <img src="images/video-editing.png" alt="Video Editing Project" />
+          <div class="card-content">
+            <h3>Video Production</h3>
+            <p>High-quality editing projects for clients who need clean and engaging visuals.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/website-development.png" alt="Website Project" />
+          <div class="card-content">
+            <h3>Business Websites</h3>
+            <p>Responsive websites designed to help brands and businesses create a strong online presence.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/app-development.png" alt="App Development Project" />
+          <div class="card-content">
+            <h3>App Solutions</h3>
+            <p>Custom application interfaces and useful system solutions for different client needs.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Graphics Design Project">
-        <p>Logo and branding for a startup.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1523475496153-3d6ccf0fef57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="App Project">
-        <p>Mobile app development project for a local client.</p>
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">We combine skill, creativity, and practical support to serve you better.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Professional Service</h3>
+          <p>We focus on quality work, good communication, and reliable support for every client.</p>
+        </div>
+        <div class="why-card">
+          <h3>Affordable Solutions</h3>
+          <p>We provide services at fair prices while maintaining strong standards and value.</p>
+        </div>
+        <div class="why-card">
+          <h3>Fast Response</h3>
+          <p>Clients can quickly reach us by phone or WhatsApp for support and service inquiries.</p>
+        </div>
+        <div class="why-card">
+          <h3>Wide IT Coverage</h3>
+          <p>From websites to networking and system support, we handle many IT-related challenges.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <p><strong>Phone:</strong> +256 753 298 143</p>
-      <p><strong>Email:</strong> <a href="mailto:djanssentongo@gmail.com">djanssentongo@gmail.com</a></p>
-      <p><
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Reach out today and let’s work on your next project or IT solution.</p>
 
+      <div class="contact-wrapper">
+        <div class="contact-box">
+          <h3 style="margin-bottom:15px; color:#fff;">Contact Information</h3>
+          <p><strong>Business Name:</strong> Najib Cyber Solutions</p>
+          <p><strong>Phone:</strong> <a href="tel:+256753298143">+256 753 298 143</a></p>
+          <p><strong>Email:</strong> <a href="mailto:djanssentongo@gmail.com">djanssentongo@gmail.com</a></p>
+          <p><strong>Location:</strong> Kampala, Uganda</p>
+        </div>
+
+        <div class="contact-box whatsapp-banner">
+          <h3>Chat with Us on WhatsApp</h3>
+          <p>Need a website, app, design, networking support, or any other IT service? Click below and message us directly on WhatsApp.</p>
+          <a href="https://wa.me/256753298143?text=Hello%20Najib%20Cyber%20Solutions%2C%20I%20am%20interested%20in%20your%20services" class="btn btn-secondary" target="_blank">Open WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Najib Cyber Solutions. All Rights Reserved.</p>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/256753298143?text=Hello%20Najib%20Cyber%20Solutions%2C%20I%20need%20your%20help" target="_blank" title="Chat on WhatsApp">✆</a>
+
+</body>
+</html>
