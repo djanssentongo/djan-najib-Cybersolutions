@@ -101,7 +101,6 @@
     }
 
     header {
-      background: linear-gradient(135deg, rgba(0, 102, 255, 0.88), rgba(0, 214, 143, 0.82));
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -110,6 +109,19 @@
       padding: 120px 20px 80px;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
+      background: #08111c;
+    }
+
+    .bg-zoom {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)),
+        url("images/hero.jpeg") center 15% / cover no-repeat;
+      transform: scale(1);
+      animation: zoomBg 18s ease-in-out infinite alternate;
+      z-index: 0;
     }
 
     header::before,
@@ -119,6 +131,7 @@
       border-radius: 50%;
       background: rgba(255,255,255,0.08);
       animation: floaty 10s linear infinite;
+      z-index: 1;
     }
 
     header::before {
@@ -136,16 +149,18 @@
       animation-duration: 13s;
     }
 
-    @keyframes floaty {
-      0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(20px) rotate(180deg); }
-      100% { transform: translateY(0px) rotate(360deg); }
-    }
-
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 950px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 28px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+      animation: fadeUp 1.4s ease;
     }
 
     .hero-badge {
@@ -174,6 +189,8 @@
       font-size: 3.3rem;
       margin-bottom: 15px;
       color: #fff;
+      animation: fadeUp 1.2s ease;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.45);
     }
 
     header p {
@@ -181,6 +198,8 @@
       max-width: 780px;
       margin: 0 auto 25px;
       color: #f2f2f2;
+      animation: fadeUp 1.8s ease;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.45);
     }
 
     .hero-buttons {
@@ -189,6 +208,7 @@
       flex-wrap: wrap;
       gap: 15px;
       margin-top: 22px;
+      animation: fadeUp 2.2s ease;
     }
 
     .btn {
@@ -219,6 +239,28 @@
     .btn-secondary:hover {
       background: #e7eefc;
       transform: translateY(-3px);
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(20px) rotate(180deg); }
+      100% { transform: translateY(0px) rotate(360deg); }
+    }
+
+    @keyframes zoomBg {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     nav {
@@ -689,6 +731,10 @@
         font-size: 2.3rem;
       }
 
+      .hero-content {
+        padding: 24px 18px;
+      }
+
       nav .nav-container {
         justify-content: center;
       }
@@ -715,6 +761,8 @@
   </div>
 
   <header id="home">
+    <div class="bg-zoom"></div>
+
     <div class="hero-content reveal">
       <span class="hero-badge">Professional IT Services in Kampala, Uganda</span>
       <img src="images/logo.png" alt="Najib Cyber Solutions Logo" class="logo" />
@@ -913,7 +961,7 @@
   <section id="video" class="reveal">
     <div class="container">
       <h2 class="section-title">Featured Work Video</h2>
-      
+
       <div class="video-box">
         <div class="video-frame">
           <video controls playsinline preload="metadata">
@@ -1059,7 +1107,6 @@
   <section id="contact-form" class="reveal">
     <div class="container">
       <h2 class="section-title">Request a Service</h2>
-      
 
       <div class="form-layout">
         <div class="form-box">
